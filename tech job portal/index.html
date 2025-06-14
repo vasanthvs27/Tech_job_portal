@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobHunt - Job Listings Aggregator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>JobHunt</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Saved Jobs</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Find Your Dream Job</h2>
+      <p>Search across multiple job platforms in one place</p>
+      
+      <div class="search-container">
+        <form id="search-form">
+          <div class="search-row">
+            <div class="search-group">
+              <input type="text" id="keyword" placeholder="Job title, keywords, or company">
+            </div>
+            <div class="search-group">
+              <input type="text" id="location" placeholder="City, state, or zip code">
+            </div>
+            <button type="submit" id="search-button">Search Jobs</button>
+          </div>
+          <div class="search-options">
+            <div class="source-options">
+              <label><input type="checkbox" id="indeed" checked> Indeed</label>
+              <label><input type="checkbox" id="glassdoor" checked> Glassdoor</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="results">
+    <div class="container">
+      <div class="filters">
+        <h3>Filters</h3>
+        <div class="filter-group">
+          <h4>Date Posted</h4>
+          <label><input type="radio" name="date" value="any" checked> Any time</label>
+          <label><input type="radio" name="date" value="day"> Last 24 hours</label>
+          <label><input type="radio" name="date" value="week"> Last week</label>
+          <label><input type="radio" name="date" value="month"> Last month</label>
+        </div>
+        <div class="filter-group">
+          <h4>Job Type</h4>
+          <label><input type="checkbox" value="fulltime"> Full-time</label>
+          <label><input type="checkbox" value="parttime"> Part-time</label>
+          <label><input type="checkbox" value="contract"> Contract</label>
+          <label><input type="checkbox" value="remote"> Remote</label>
+        </div>
+        <div class="filter-group">
+          <h4>Experience Level</h4>
+          <label><input type="checkbox" value="entry"> Entry Level</label>
+          <label><input type="checkbox" value="mid"> Mid Level</label>
+          <label><input type="checkbox" value="senior"> Senior Level</label>
+        </div>
+        <button id="apply-filters">Apply Filters</button>
+      </div>
+      
+      <div class="job-listings">
+        <div class="loading-indicator" id="loading">
+          <div class="spinner"></div>
+          <p>Searching for jobs...</p>
+        </div>
+        
+        <div id="results-stats" class="results-stats">
+          <p><span id="results-count">0</span> jobs found</p>
+          <div class="sort-options">
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by">
+              <option value="relevance">Relevance</option>
+              <option value="date">Date</option>
+              <option value="salary">Salary</option>
+            </select>
+          </div>
+        </div>
+        
+        <div id="job-list" class="job-list">
+          <!-- Job listings will be inserted here by JavaScript -->
+        </div>
+        
+        <div class="pagination" id="pagination">
+          <!-- Pagination will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="job-detail-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="job-detail-content">
+        <!-- Job details will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 JobHunt. For educational purposes only.</p>
+      <p class="disclaimer">This application is for demonstration purposes. Please respect the terms of service of job listing websites.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
