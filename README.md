@@ -1,16 +1,22 @@
 Tech Job Portal by Scraping Indeed and Glassdoor 
+
 Introduction: 
+
 This project is focused on developing a tech-specific job search platform by scraping job listings from 
 sites like Indeed and Glassdoor. The goal is to create a simplified job search experience for 
 developers, offering relevant listings and personalized alerts. 
+
 Technologies to Use: 
+
 • Web Scraping: Python (BeautifulSoup, Scrapy) 
 • Backend: Django/Flask 
 • Frontend: HTML, CSS, JavaScript (React or Vue.js) 
 • Database: MySQL/PostgreSQL 
 • Notification System: Email APIs (SendGrid), WebSockets 
 • Scheduler: Cron jobs or Celery 
+
 Features to Develop 
+
 User Features 
 1. Registration and Login:Create user accounts to save job preferences and listings. 
 2. Job Search with Filters:Enable advanced filtering by job title, company, location, and salary. 
@@ -31,3 +37,5 @@ Outcomes
 3. User-Friendly Search & Alerts:Advanced search and notifications tailored to user 
 preferences. 
 4. Simplified Interface:Easy navigation and quick access to relevant job listings.
+
+
